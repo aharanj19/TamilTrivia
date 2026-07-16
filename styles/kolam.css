@@ -1,0 +1,38 @@
+.kolam {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 120px;
+  height: 120px;
+  border: 3px dashed rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  opacity: 0.85;
+}
+
+.kolam::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+}
+
+.kolam::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.95) 2px, transparent 3px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.95) 2px, transparent 3px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.95) 2px, transparent 3px);
+  background-size: 24px 24px, 24px 24px, 24px 24px;
+  background-position: 0 0, 12px 12px, 24px 0;
+  mask: radial-gradient(circle, transparent 20%, black 21%);
+}
+
+@media (max-width: 600px) {
+  .kolam {
+    width: 84px;
+    height: 84px;
+  }
+}

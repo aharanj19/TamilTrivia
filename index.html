@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tamil Trivia Fun</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/kolam.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="kolam-card">
+        <div class="kolam" aria-hidden="true"></div>
+        <h1>Tamil Trivia Fun</h1>
+        <p class="intro">
+          Discover the warmth of Tamil culture through easy, friendly questions.
+          Every correct answer gives you 10 points.
+        </p>
+
+        <div class="scoreboard">
+          <div>Score: <span id="score">0</span></div>
+          <div>Question: <span id="question-number">1/8</span></div>
+        </div>
+
+        <section class="quiz-card">
+          <h2 id="question">Loading question...</h2>
+          <div id="answers" class="answers"></div>
+          <p id="feedback" class="feedback" aria-live="polite"></p>
+          <button id="nextBtn" class="next-btn" hidden>Next Question</button>
+        </section>
+
+        <p class="note">
+          The quiz is written in simple English so everyone can enjoy it, while still sharing a little Tamil heritage.
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
